@@ -1,0 +1,39 @@
+
+.TopMenu h4 {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  background-color: #ff9800;
+  padding: 8px 10px;
+  color: #fff;
+  border-radius: 3px;
+  box-shadow: 3px 2px 3px #ccc;
+}
+
+.TopMenu h4:hover {
+  cursor: pointer;
+  box-shadow: 5px 3px 5px #ccc;
+}
+
+.NavigationBox {
+  position: absolute;
+  top: 7rem;
+  right: 3rem;
+  padding: 10px;
+  box-shadow: 1px 2px 2px #ccc;
+  border-radius: 3px;
+}
+
+.NavigationBox ul {
+  padding: 0;
+}
+
+.NavigationBox ul li {
+  list-style: none;
+  padding: 10px 20px;
+  color: #ff9800;
+}
+
+.NavigationBox ul li:hover {
+  background-color: #ccc;
+}

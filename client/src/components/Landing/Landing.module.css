@@ -1,0 +1,35 @@
+.LandingCurve {
+  background-color: #ff9800; /* use teddy bear color */
+  height: 100vh;
+  width: 75%;
+  border-bottom-right-radius: 40rem;
+  position: relative;
+  background-image: linear-gradient(to left, rgba(255, 152, 0, 0.9), rgba(255, 152, 0, .9)), url('../../images/Workplace-1.jpg');
+  background-size: cover;
+}
+
+.LandingCurve h4 {
+  padding: 0;
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  color: #fff;
+}
+
+.LandingText {
+  position: absolute;
+  top: 45%;
+  left: 1%;
+  color: #fff;
+}
+
+.LandingText h3 {
+  text-transform: uppercase;
+}
+
+.ShortLine {
+  height: 0.1rem;
+  background-color: #dddddd;
+  width: 5rem;
+  margin-left: 0.3rem;
+}
