@@ -7,7 +7,9 @@ class TopNav extends Component {
   render () {
 
     return (
-      <nav className={classes.TopMenu}>
+      <nav className={classes.TopNav}>
+       <div className={classes.TopMenuBtn}></div>
+       <div className={classes.TopMenu}>
         <h4>LOGIN</h4>
         <div className={classes.NavigationBox}>
            <ul>
@@ -17,6 +19,14 @@ class TopNav extends Component {
              <li>Surveys</li>
            </ul>
         </div>
+      </div>
+
+        {/*  <div className={classes.Profile}>
+             <div className={classes.Picture}></div>
+             <div className={classes.ProfileName}>Welcome Chimaobi</div>
+          </div>
+          */}
+
       </nav>
     )
   }

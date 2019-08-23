@@ -1,12 +1,39 @@
+.TopNav {
+  position: relative;
+}
+
+.TopMenu {
+  position: absolute;
+  z-index: 50;
+  top: 2rem;
+  right: 2rem;
+}
+
+@media (max-width: 767px) {
+  .TopMenu {
+    display: none;
+  }
+  .TopMenuBtn {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background-color: #ccc;
+    position: absolute;
+    top: .8rem;
+    right: 1rem;
+    z-index: 150;
+  }
+}
 
 .TopMenu h4 {
   position: absolute;
-  top: 2rem;
+  top: 1rem;
   right: 3rem;
   background-color: #ff9800;
   padding: 8px 10px;
   color: #fff;
   border-radius: 3px;
+  font-size: 1rem;
   box-shadow: 3px 2px 3px #ccc;
 }
 
@@ -22,6 +49,7 @@
   padding: 10px;
   box-shadow: 1px 2px 2px #ccc;
   border-radius: 3px;
+  font-size: 1rem;
 }
 
 .NavigationBox ul {
@@ -36,4 +64,26 @@
 
 .NavigationBox ul li:hover {
   background-color: #ccc;
+}
+
+.Profile {
+  position: relative;
+  width: 15rem;
+  height: 3rem;
+  font-size: 1rem;
+}
+
+.Picture {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  background-color: #ccc;
+
+}
+
+.ProfileName {
+  position: absolute;
+  top: 1rem;
+  left: 3.5rem;
 }

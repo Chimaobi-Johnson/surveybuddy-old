@@ -2,7 +2,7 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
-const keys = require('../config/dev');
+const keys = require('../config/keys');
 const User = mongoose.model('user');
 
 passport.serializeUser((user, done) => { // To generate a token using user._id to send to the client as cookie

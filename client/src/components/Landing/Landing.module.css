@@ -1,3 +1,7 @@
+.LandingMain {
+  position: relative;
+}
+
 .LandingCurve {
   background-color: #ff9800; /* use teddy bear color */
   height: 100vh;
@@ -14,6 +18,35 @@
   top: 1rem;
   left: 2rem;
   color: #fff;
+  font-size: .9rem;
+}
+
+@media (max-width: 767px) {
+  .LandingCurve {
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+  }
+
+  .LandingCurve h4 {
+    top: .5rem;
+    left: 1rem;
+    font-size: .5rem;
+  }
+
+  .LandingText h3 {
+    padding: 10px;
+    font-size: .9rem;
+  }
+
+  .ShortLine {
+    height: 0.1rem;
+    background-color: red;
+    width: 2.5rem;
+    margin-left: 0.6rem;
+  }
+
+
 }
 
 .LandingText {
@@ -21,6 +54,7 @@
   top: 45%;
   left: 1%;
   color: #fff;
+  font-size: 1rem;
 }
 
 .LandingText h3 {
@@ -29,7 +63,25 @@
 
 .ShortLine {
   height: 0.1rem;
-  background-color: #dddddd;
+  background-color: red;
   width: 5rem;
   margin-left: 0.3rem;
+}
+
+.ArrowBox {
+  position: absolute;
+  bottom: 5rem;
+  right: 20rem;
+  display: flex;
+}
+
+.Arrow {
+  width: 5rem;
+  height: 5rem;
+  background-color: red;
+  border-radius: 100%;
+}
+
+.ArrowBox h2 {
+  padding-left: 1rem;
 }

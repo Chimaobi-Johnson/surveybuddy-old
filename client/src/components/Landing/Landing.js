@@ -3,7 +3,7 @@ import * as classes from './Landing.module.css';
 
 const landing = props => {
      return (
-       <div>
+       <div className={classes.LandingMain}>
             <div className={classes.LandingCurve}>
             <h4>SURVEYBUDDY</h4>
 
@@ -14,8 +14,13 @@ const landing = props => {
                   <h2>Review and Analyze Data</h2> */}
               </div>
             </div>
-
-       </div>
+            {/*
+          <div className={classes.ArrowBox}>
+            <div className={classes.Arrow}></div>
+            <h2>LOGIN TO GET STARTED</h2>
+          </div>
+          */}
+      </div>
      )
 }
 
