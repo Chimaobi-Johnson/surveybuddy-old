@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const passport = require('passport');
+const bodyParser = require('body-parser');
 const cookieSession = require('cookie-session');
 const app = express();
 
@@ -9,8 +10,19 @@ const keys = require('./config/keys');
 require('./models/User');
 require('./services/passport');
 
+app.use(bodyParser.json()); // to parse incoming json data
 
 const authRoutes = require('./routes/authRoutes');
+
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader(
+    'Access-Control-Allow-Methods',
+    'OPTIONS, GET, POST, PUT, PATCH, DELETE'
+  );
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
+});
 
 
 app.get('/', (req, res) => {

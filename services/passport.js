@@ -1,9 +1,66 @@
 const passport = require('passport');
 const mongoose = require('mongoose');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const LocalStrategy = require('passport-local').Strategy;
+const FacebookStrategy = require('passport-facebook').Strategy;
 
 const keys = require('../config/keys');
 const User = mongoose.model('user');
+
+
+passport.use(new LocalStrategy({
+   usernameField: 'user[email]',
+   passwordField: 'user[password]',
+  },
+  function(email, password, done) {
+    User.findOne({ email })
+    .then(user => {
+      if(!user || !user.validatePassword(password)) {
+      return done(null, false, { errors: { 'email or password': 'is invalid' } });
+      }
+      return done(null, user);
+    }).catch(err => console.log(err));
+  }
+
+));
+
+
+passport.use(new FacebookStrategy({
+    clientID: keys.facebookAppID,
+    clientSecret: keys.facebookAppSecret,
+    callbackURL: "/auth/facebook/callback"
+  },
+  function(accessToken, refreshToken, profile, done) {
+    const facebookID = profile.id;
+    const displayName = profile.displayName;
+    const firstName = profile.name.givenName
+    const email = profile.email;
+    const profilePhoto = profile.profileUrl;
+
+    User.findOne({facebookId: facebookID})
+    .then(existingUser => {
+      if(existingUser) {
+        done(null, existingUser);
+      } else {
+        const user = new User({
+          facebookId: facebookID,
+          firstName: firstName,
+          displayName: displayName,
+          email: email,
+          profilePhoto: profilePhoto
+        });
+        user.save()
+        .then(user => {
+          done(null, user);
+        })
+        .catch(err => console.log(err))
+      }
+    })
+    .catch(err => {
+      console.log(err);
+    })
+  }
+));
 
 passport.serializeUser((user, done) => { // To generate a token using user._id to send to the client as cookie
   done(null, user.id);

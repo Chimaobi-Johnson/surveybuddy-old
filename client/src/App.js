@@ -9,6 +9,7 @@ function App() {
     <div className="App">
         <TopNav />
         <Landing />
+        <AuthModal />      
     </div>
 
      // pass authreducer from here starting from AuthModal down to TopNav and the rest of the page
