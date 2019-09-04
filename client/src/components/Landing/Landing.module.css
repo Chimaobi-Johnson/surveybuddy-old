@@ -1,87 +1,192 @@
 .LandingMain {
   position: relative;
+  height: 100vh;
+  /* background-color: red; */
 }
 
 .LandingCurve {
-  background-color: #ff9800; /* use teddy bear color */
-  height: 100vh;
-  width: 75%;
-  border-bottom-right-radius: 40rem;
-  position: relative;
-  background-image: linear-gradient(to left, rgba(255, 152, 0, 0.9), rgba(255, 152, 0, .9)), url('../../images/Workplace-1.jpg');
-  background-size: cover;
-}
-
-.LandingCurve h4 {
-  padding: 0;
-  position: absolute;
-  top: 1rem;
-  left: 2rem;
-  color: #fff;
-  font-size: .9rem;
-}
-
-@media (max-width: 767px) {
-  .LandingCurve {
-    width: 100%;
-    background-size: cover;
-    background-position: top;
-  }
-
-  .LandingCurve h4 {
-    top: .5rem;
-    left: 1rem;
-    font-size: .5rem;
-  }
-
-  .LandingText h3 {
-    padding: 10px;
-    font-size: .9rem;
-  }
-
-  .ShortLine {
-    height: 0.1rem;
-    background-color: red;
-    width: 2.5rem;
-    margin-left: 0.6rem;
-  }
-
-
-}
-
-.LandingText {
-  position: absolute;
-  top: 45%;
-  left: 1%;
-  color: #fff;
-  font-size: 1rem;
-}
-
-.LandingText h3 {
-  text-transform: uppercase;
-}
-
-.ShortLine {
-  height: 0.1rem;
-  background-color: red;
-  width: 5rem;
-  margin-left: 0.3rem;
-}
-
-.ArrowBox {
-  position: absolute;
-  bottom: 5rem;
-  right: 20rem;
-  display: flex;
-}
-
-.Arrow {
-  width: 5rem;
-  height: 5rem;
-  background-color: red;
+  height: 80vh;
+  width: 40%;
   border-radius: 100%;
+  position: relative;
+  background-image: radial-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .4)), url('../../images/Workplace-2.png');
+  background-size: cover;
+  top: 10%;
+  left: -2rem;
 }
 
-.ArrowBox h2 {
-  padding-left: 1rem;
+.LandingCircle2 {
+  height: 50%;
+  width: 50%;
+  background-color: rgb(255, 152, 0, .9);
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, -50%);
+}
+
+
+@media (max-width: 699px) {
+  .LandingCurve {
+    top: -3rem !important;
+    height: 80vh;
+    width: 90%;
+    border-radius: 0;
+    border-bottom-right-radius: 100rem;
+    position: relative;
+    background-image: radial-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .4)), url('../../images/Workplace-2.png');
+    background-size: cover;
+    left: -2rem;
+    z-index: 20;
+  }
+
+  .CartoonImage {
+    position: absolute;
+    margin-top: 25rem;
+    margin-right: 0rem;
+  }
+
+  .LandingCircle2 {
+    height: 35%;
+    width: 50%;
+    background-color: rgb(255, 152, 0, .9);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: -18%;
+    transform: translate(49%, 105%);
+  }
+
+  .LandingTextBox {
+    margin-top: -5rem;
+    margin-left: -5rem;
+    width: 100%;
+    height: auto;
+    transform: translate(0%, 0%);
+  }
+
+  .ImageBox {
+    display: none;
+  }
+
+
+}
+
+
+.ImageBox {
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  top: 5rem;
+  height: 50vh;
+  width: 50%;
+}
+
+
+.CartoonImage {
+  position: absolute;
+  right: 10rem;
+  top: 5.5rem;
+  width: 28rem;
+  height: 38rem;
+}
+
+
+.LandingTextBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250%;
+  transform: translate(10%, 10%);
+}
+
+.LandingTextBox h2 {
+  font-size: 2.9rem;
+  text-transform: uppercase;
+
+}
+
+.LandingTextBox p {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+   /* margin-bottom: 2rem; */
+}
+
+.HomeButton {
+  padding: .9rem 1.7rem;
+  border: 2px solid #ff9800;
+  float: left;
+  box-shadow: 1px 2px 2px #ccc;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #000;
+  border-radius: .2rem;
+}
+
+.HomeButton:hover {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+.TitleBlock {
+  position: absolute;
+  padding: 1rem;
+  transform: translateY(-1rem);
+  /* background-color: #191611; */
+  color: #000;
+  font-weight: bold;
+  font-size: 1.6rem
+}
+
+.TitleBlock h3 {
+  color: #fff;
+  padding: 2rem;
+}
+
+
+.Item1,
+ .Item2,
+ .Item3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-duration: 20s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  color: #fff;
+}
+
+.Item1 {
+	animation-name: anim-1;
+}
+
+.Item2 {
+	animation-name: anim-2;
+}
+
+.Item3 {
+	animation-name: anim-3;
+}
+
+@keyframes anim-1 {
+	0%, 8.3% { top: -100%; opacity: 0; }
+  8.3%,25% { top: 48%; opacity: 1; }
+  33.33%, 100% { top: 110%; opacity: 0; }
+}
+
+@keyframes anim-2 {
+	0%, 33.33% { top: -100%; opacity: 0; }
+  41.63%, 58.29% { top: 48%; opacity: 1; }
+  66.66%, 100% { top: 110%; opacity: 0; }
+}
+
+@keyframes anim-3 {
+	0%, 66.66% { top: -100%; opacity: 0; }
+  74.96%, 91.62% { top: 48%; opacity: 1; }
+  100% { top: 110%; opacity: 0; }
 }
