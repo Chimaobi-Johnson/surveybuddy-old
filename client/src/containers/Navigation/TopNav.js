@@ -28,7 +28,7 @@ class TopNav extends Component {
        case null:
         return <h3>Loading....</h3>
        case false:
-         return <Button onClick={this.showAuthModal} btnType='primary'>LOGIN/REGISTER</Button>
+         return <Button onClick={this.showAuthModal} btntype='primary'>LOGIN/REGISTER</Button>
        default:
         return (
           <div>
